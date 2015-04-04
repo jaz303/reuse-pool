@@ -11,6 +11,7 @@ function ReusePool(factory, opts) {
     this._recycled = [];
     opts = opts || EMPTY;
     this._prepare = opts.prepare || NO_OP;
+    this._max = opts.max || Infinity;
 }
 
 ReusePool.prototype.get = function() {
@@ -24,5 +25,7 @@ ReusePool.prototype.get = function() {
 }
 
 ReusePool.prototype.recycle = function(obj) {
-    this._recycled.push(obj);
+	if (this._recycled.length < this._max) {
+		this._recycled.push(obj);	
+	}
 }

@@ -59,3 +59,20 @@ test('prepare is called before returning reused object', function(assert) {
     assert.end();
 
 });
+
+test('max items is respected', function(assert) {
+
+	var p = pool(function() { return {}; }, { max: 1 });
+
+	var obj1 = p.get();
+	var obj2 = p.get();
+	var obj3 = p.get();
+
+	p.recycle(obj1);
+	p.recycle(obj2);
+	p.recycle(obj3);
+
+	assert.equal(obj1, p.get());
+	assert.end();
+
+});

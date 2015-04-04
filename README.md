@@ -19,6 +19,7 @@ Require it:
 Creates a new object pool with the given `factory` function. `opts` is an options object, valid keys:
 
   * `prepare`: callback used to prepare an object for reuse, called each time an existing object is removed from the pool by a call to `pool.get()`. It is not called when new objects are created by the factory function.
+  * `max`: maximum number of items to be pooled for reuse; any additional items beyond this number will be discared. Default: `Infinity`.
 
 #### `pool.get()`
 
