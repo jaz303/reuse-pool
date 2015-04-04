@@ -2,7 +2,7 @@
   "name": "reuse-pool",
   "version": "0.0.0",
   "description": "Pool arbitrary objects for reuse",
-  "keywords": [],
+  "keywords": ["object", "pool", "reuse", "factory", "performance", "optimisation"],
   "scripts": {
     "test": "set -e; for t in test/*; do node $t; done"
   },
