@@ -1,0 +1,23 @@
+{
+  "name": "reuse-pool",
+  "version": "0.0.0",
+  "description": "Pool arbitrary objects for reuse",
+  "keywords": [],
+  "scripts": {
+    "test": "set -e; for t in test/*; do node $t; done"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaz303/reuse-pool.git"
+  },
+  "author": "Jason Frame <jason@onehackoranother.com> (http://jasonframe.co.uk)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaz303/reuse-pool/issues"
+  },
+  "homepage": "http://github.com/jaz303/reuse-pool"
+}
